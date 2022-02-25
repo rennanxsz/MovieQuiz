@@ -9,6 +9,8 @@ import UIKit
 
 class GameOverViewController: UIViewController {
 
+    @IBOutlet weak var lbScore: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,5 +27,8 @@ class GameOverViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func playAgain(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }

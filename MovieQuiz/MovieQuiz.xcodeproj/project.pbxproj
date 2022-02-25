@@ -16,7 +16,6 @@
 		00AA5AFB27C858830053D8C5 /* quote4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00AA5AE527C858430053D8C5 /* quote4.mp3 */; };
 		00AA5AFC27C858830053D8C5 /* quote9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00AA5AF127C858430053D8C5 /* quote9.mp3 */; };
 		00AA5AFD27C858830053D8C5 /* quote14.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00AA5AEC27C858430053D8C5 /* quote14.mp3 */; };
-		00AA5AFE27C858830053D8C5 /* MarchaImperial.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00AA5AFA27C858500053D8C5 /* MarchaImperial.mp3 */; };
 		00AA5AFF27C858830053D8C5 /* quote10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00AA5AF627C858430053D8C5 /* quote10.mp3 */; };
 		00AA5B0027C858830053D8C5 /* quote8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00AA5AF327C858430053D8C5 /* quote8.mp3 */; };
 		00AA5B0127C858830053D8C5 /* quote12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00AA5AE827C858430053D8C5 /* quote12.mp3 */; };
@@ -37,6 +36,7 @@
 		00AA5B1027C858830053D8C5 /* quote6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00AA5AEF27C858430053D8C5 /* quote6.mp3 */; };
 		00AA5B1127C858830053D8C5 /* quote18.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00AA5AE427C858430053D8C5 /* quote18.mp3 */; };
 		00AA5B1327C868230053D8C5 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AA5B1227C868230053D8C5 /* GameOverViewController.swift */; };
+		00AA5B1527C869A10053D8C5 /* MarchaImperial.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00AA5B1427C869A10053D8C5 /* MarchaImperial.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,8 +70,8 @@
 		00AA5AF727C858430053D8C5 /* quote19.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = quote19.mp3; sourceTree = "<group>"; };
 		00AA5AF827C858430053D8C5 /* quote11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = quote11.mp3; sourceTree = "<group>"; };
 		00AA5AF927C858430053D8C5 /* quote13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = quote13.mp3; sourceTree = "<group>"; };
-		00AA5AFA27C858500053D8C5 /* MarchaImperial.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = MarchaImperial.mp3; path = "../../../../../../Downloads/Arquivos MovieQuiz/Files/MarchaImperial.mp3"; sourceTree = "<group>"; };
 		00AA5B1227C868230053D8C5 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		00AA5B1427C869A10053D8C5 /* MarchaImperial.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = MarchaImperial.mp3; path = "../../../../../../Downloads/Arquivos MovieQuiz/MarchaImperial.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +120,7 @@
 		00AA5AE227C858420053D8C5 /* Files */ = {
 			isa = PBXGroup;
 			children = (
-				00AA5AFA27C858500053D8C5 /* MarchaImperial.mp3 */,
+				00AA5B1427C869A10053D8C5 /* MarchaImperial.mp3 */,
 				00AA5AE327C858430053D8C5 /* options.json */,
 				00AA5AF027C858430053D8C5 /* quizes.json */,
 				00AA5AE627C858430053D8C5 /* quote1.mp3 */,
@@ -220,10 +220,10 @@
 				00AA5B0A27C858830053D8C5 /* options.json in Resources */,
 				00AA5AAA27C856A40053D8C5 /* Assets.xcassets in Resources */,
 				00AA5AFD27C858830053D8C5 /* quote14.mp3 in Resources */,
+				00AA5B1527C869A10053D8C5 /* MarchaImperial.mp3 in Resources */,
 				00AA5AFC27C858830053D8C5 /* quote9.mp3 in Resources */,
 				00AA5B0027C858830053D8C5 /* quote8.mp3 in Resources */,
 				00AA5B0227C858830053D8C5 /* quote7.mp3 in Resources */,
-				00AA5AFE27C858830053D8C5 /* MarchaImperial.mp3 in Resources */,
 				00AA5AFB27C858830053D8C5 /* quote4.mp3 in Resources */,
 				00AA5B1127C858830053D8C5 /* quote18.mp3 in Resources */,
 				00AA5AA827C856A30053D8C5 /* Main.storyboard in Resources */,

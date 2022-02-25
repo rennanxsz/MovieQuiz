@@ -26,6 +26,9 @@
                                         <rect key="frame" x="357" y="2.5" width="47" height="37"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="music"/>
+                                        <connections>
+                                            <action selector="showHideSoundBar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wAS-nW-DXi"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIO-No-q7F">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="42"/>
@@ -34,9 +37,15 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="pause"/>
+                                        <connections>
+                                            <action selector="changeMusicStatus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YL0-Vk-nEB"/>
+                                        </connections>
                                     </button>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="82E-QQ-tQJ">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82E-QQ-tQJ">
                                         <rect key="frame" x="46" y="6" width="305" height="31"/>
+                                        <connections>
+                                            <action selector="changeMusicTime:" destination="BYZ-38-t0r" eventType="valueChanged" id="OIi-k7-VRu"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -62,6 +71,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Nome do Filme">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X03-t2-HFm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBD-XO-iNI">
                                 <rect key="frame" x="0.0" y="732" width="414" height="32"/>
@@ -70,6 +82,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Nome do Filme">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P0w-3P-1Hi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kV-Mg-TO7">
                                 <rect key="frame" x="0.0" y="692" width="414" height="32"/>
@@ -78,6 +93,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Nome do Filme">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6ec-ib-mfy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wc1-9z-o1d">
                                 <rect key="frame" x="0.0" y="652" width="414" height="32"/>
@@ -86,6 +104,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Nome do Filme">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nLm-x7-oZs"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="JuI-8w-q4Y">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="632"/>
@@ -146,6 +167,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ivQuiz" destination="vIC-xn-ryu" id="xvE-tR-0Oy"/>
+                        <outlet property="slMusic" destination="82E-QQ-tQJ" id="PtD-Jb-E2t"/>
+                        <outlet property="viSoundBar" destination="4VF-Fv-mmt" id="dMs-cm-yFp"/>
+                        <outletCollection property="btOptions" destination="Wc1-9z-o1d" collectionClass="NSMutableArray" id="5I9-Uk-4yG"/>
+                        <outletCollection property="btOptions" destination="1kV-Mg-TO7" collectionClass="NSMutableArray" id="GSl-P6-Yld"/>
+                        <outletCollection property="btOptions" destination="dBD-XO-iNI" collectionClass="NSMutableArray" id="t4M-Vh-0w6"/>
+                        <outletCollection property="btOptions" destination="WiI-W1-q15" collectionClass="NSMutableArray" id="sOj-j6-Jgn"/>
                         <segue destination="fef-gv-Zuy" kind="show" identifier="GameOverSegue" id="h4R-1G-tio"/>
                     </connections>
                 </viewController>
@@ -193,6 +221,9 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                     <color key="baseForegroundColor" white="1" alpha="0.90402524829999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="playAgain:" destination="fef-gv-Zuy" eventType="touchUpInside" id="Qgl-0E-fpZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="z3c-FU-jS0"/>
@@ -214,6 +245,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Eq1-l3-lJo"/>
+                    <connections>
+                        <outlet property="lbScore" destination="0aX-LH-lYU" id="bRh-lY-a5a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMj-GF-UcF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
