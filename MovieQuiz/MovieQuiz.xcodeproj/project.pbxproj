@@ -36,6 +36,7 @@
 		00AA5B0F27C858830053D8C5 /* quote2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00AA5AE727C858430053D8C5 /* quote2.mp3 */; };
 		00AA5B1027C858830053D8C5 /* quote6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00AA5AEF27C858430053D8C5 /* quote6.mp3 */; };
 		00AA5B1127C858830053D8C5 /* quote18.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00AA5AE427C858430053D8C5 /* quote18.mp3 */; };
+		00AA5B1327C868230053D8C5 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AA5B1227C868230053D8C5 /* GameOverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		00AA5AF827C858430053D8C5 /* quote11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = quote11.mp3; sourceTree = "<group>"; };
 		00AA5AF927C858430053D8C5 /* quote13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = quote13.mp3; sourceTree = "<group>"; };
 		00AA5AFA27C858500053D8C5 /* MarchaImperial.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = MarchaImperial.mp3; path = "../../../../../../Downloads/Arquivos MovieQuiz/Files/MarchaImperial.mp3"; sourceTree = "<group>"; };
+		00AA5B1227C868230053D8C5 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				00AA5AA227C856A30053D8C5 /* SceneDelegate.swift */,
 				00AA5AA427C856A30053D8C5 /* ViewController.swift */,
 				00AA5AA627C856A30053D8C5 /* Main.storyboard */,
+				00AA5B1227C868230053D8C5 /* GameOverViewController.swift */,
 				00AA5AA927C856A40053D8C5 /* Assets.xcassets */,
 				00AA5AAB27C856A40053D8C5 /* LaunchScreen.storyboard */,
 				00AA5AAE27C856A40053D8C5 /* Info.plist */,
@@ -238,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00AA5B1327C868230053D8C5 /* GameOverViewController.swift in Sources */,
 				00AA5AA527C856A30053D8C5 /* ViewController.swift in Sources */,
 				00AA5AA127C856A30053D8C5 /* AppDelegate.swift in Sources */,
 				00AA5AA327C856A30053D8C5 /* SceneDelegate.swift in Sources */,
