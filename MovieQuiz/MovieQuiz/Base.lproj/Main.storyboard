@@ -19,6 +19,11 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="f38-pe-xXH">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wYA-jE-M3b">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4VF-Fv-mmt">
                                 <rect key="frame" x="0.0" y="820" width="414" height="42"/>
                                 <subviews>
@@ -170,6 +175,7 @@
                         <outlet property="ivQuiz" destination="vIC-xn-ryu" id="xvE-tR-0Oy"/>
                         <outlet property="slMusic" destination="82E-QQ-tQJ" id="PtD-Jb-E2t"/>
                         <outlet property="viSoundBar" destination="4VF-Fv-mmt" id="dMs-cm-yFp"/>
+                        <outlet property="viTimer" destination="wYA-jE-M3b" id="pEf-y3-gk9"/>
                         <outletCollection property="btOptions" destination="Wc1-9z-o1d" collectionClass="NSMutableArray" id="5I9-Uk-4yG"/>
                         <outletCollection property="btOptions" destination="1kV-Mg-TO7" collectionClass="NSMutableArray" id="GSl-P6-Yld"/>
                         <outletCollection property="btOptions" destination="dBD-XO-iNI" collectionClass="NSMutableArray" id="t4M-Vh-0w6"/>

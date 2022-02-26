@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var slMusic: UISlider!
     @IBOutlet var btOptions: [UIButton]!
     @IBOutlet weak var ivQuiz: UIImageView!
+    @IBOutlet weak var viTimer: UIView!
     
     var quizManager: QuizManager!
 
@@ -34,12 +35,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func checkAnswer(_ sender: UIButton) {
+        quizManager.checkAnswer(sender.title(for: .normal)!)
+        getNewQuiz()
     }
  
     @IBAction func changeMusicTime(_ sender: UISlider) {
     }
     
     @IBAction func showHideSoundBar(_ sender: UIButton) {
+        viSoundBar.isHidden = !viSoundBar.isHidden
     }
     
     @IBAction func changeMusicStatus(_ sender: UIButton) {
