@@ -9,7 +9,7 @@ import Foundation
 
 typealias Round = (quiz: Quiz, options: [QuizOption])
 
-class QuizMenager {
+class QuizManager {
     
     let quizes: [Quiz]
     let quizOptions: [QuizOption]
@@ -46,8 +46,11 @@ class QuizMenager {
         return round!
     }
     
-    func checkAnswer() {
-        
+    func checkAnswer(_ answer: String) {
+        guard let round = round else {return}
+        if answer == round.quiz.name{
+            score += 1
+        }
     }
 }
 
