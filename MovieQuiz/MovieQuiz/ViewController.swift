@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -16,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var viTimer: UIView!
     
     var quizManager: QuizManager!
+    var quizPlayer: AVAudioPlayer!
 
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -25,6 +27,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         quizManager = QuizManager()
         getNewQuiz()
+        startTimer()
     }
     
     func getNewQuiz() {
@@ -32,6 +35,22 @@ class ViewController: UIViewController {
         for i in 0..<round.options.count{
             btOptions[i].setTitle(round.options[i].name, for: .normal)
         }
+    }
+    
+    func startTimer() {
+        viTimer.frame = view.frame
+        UIView.animate(withDuration: 60.0, delay: 0.0, options: .curveLinear, animations: {
+            self.viTimer.frame.size.width = 0
+            self.viTimer.frame.origin.x = self.view.center.x
+            
+        }) { (success) in
+            self.gameOver()
+        }
+        
+    }
+    
+    func gameOver() {
+        performSegue(withIdentifier: "gameOverSegue", sender: nil)
     }
     
     @IBAction func checkAnswer(_ sender: UIButton) {
