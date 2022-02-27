@@ -180,7 +180,7 @@
                         <outletCollection property="btOptions" destination="1kV-Mg-TO7" collectionClass="NSMutableArray" id="GSl-P6-Yld"/>
                         <outletCollection property="btOptions" destination="dBD-XO-iNI" collectionClass="NSMutableArray" id="t4M-Vh-0w6"/>
                         <outletCollection property="btOptions" destination="WiI-W1-q15" collectionClass="NSMutableArray" id="sOj-j6-Jgn"/>
-                        <segue destination="fef-gv-Zuy" kind="show" identifier="GameOverSegue" id="h4R-1G-tio"/>
+                        <segue destination="fef-gv-Zuy" kind="show" identifier="gameOverSegue" id="h4R-1G-tio"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
