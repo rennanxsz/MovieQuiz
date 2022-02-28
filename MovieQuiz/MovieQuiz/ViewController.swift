@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLoad(){
         super.viewDidLoad()
         playBackgroundMusic()
+        viSoundBar.isHidden = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,6 +32,11 @@ class ViewController: UIViewController {
         quizManager = QuizManager()
         getNewQuiz()
         startTimer()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! GameOverViewController
+        vc.score = quizManager.score
     }
     
     func playBackgroundMusic() {
@@ -93,6 +99,7 @@ class ViewController: UIViewController {
     }
  
     @IBAction func changeMusicTime(_ sender: UISlider) {
+        backgroundMusicPlayer.seek(to: CMTime(seconds: Double(sender.value) * playerItem.duration.seconds, preferredTimescale: 1))
     }
     
     @IBAction func showHideSoundBar(_ sender: UIButton) {
@@ -100,6 +107,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func changeMusicStatus(_ sender: UIButton) {
+        if backgroundMusicPlayer.timeControlStatus == .paused {
+            backgroundMusicPlayer.play()
+            sender.setImage(UIImage(named: "pause"), for: .normal)
+        } else {
+            backgroundMusicPlayer.pause()
+            sender.setImage(UIImage(named: "play"), for: .normal)
+        }
     }
     
 }
