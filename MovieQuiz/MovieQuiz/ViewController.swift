@@ -18,9 +18,12 @@ class ViewController: UIViewController {
     
     var quizManager: QuizManager!
     var quizPlayer: AVAudioPlayer!
+    var playerItem: AVPlayerItem!
+    var backgroundMusicPlayer: AVPlayer!
 
     override func viewDidLoad(){
         super.viewDidLoad()
+        playBackgroundMusic()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,6 +31,20 @@ class ViewController: UIViewController {
         quizManager = QuizManager()
         getNewQuiz()
         startTimer()
+    }
+    
+    func playBackgroundMusic() {
+        let musicURL = Bundle.main.url(forResource: "MarchaImperial", withExtension: "mp3")!
+        playerItem = AVPlayerItem (url: musicURL)
+        backgroundMusicPlayer = AVPlayer(playerItem: playerItem)
+        backgroundMusicPlayer.volume = 0.1
+        backgroundMusicPlayer.play()
+        backgroundMusicPlayer.addPeriodicTimeObserver(forInterval: CMTimeMakeWithSeconds(1, preferredTimescale: 1), queue: nil) { (time) in
+            
+            let percent = time.seconds / self.playerItem.duration.seconds
+            self.slMusic.setValue(Float(percent), animated: true)
+            
+        }
     }
     
     func getNewQuiz() {
@@ -55,7 +72,7 @@ class ViewController: UIViewController {
         quizPlayer.stop()
     }
     
-    func playQuiz() {
+    @IBAction func playQuiz() {
         guard let round = quizManager.round else {return}
         ivQuiz.image = UIImage(named: "movieSound")
         if let url = Bundle.main.url(forResource: "quote\(round.quiz.number)", withExtension: "mp3") {
